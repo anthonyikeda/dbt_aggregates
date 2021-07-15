@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: daily_customer_orders_success
+    columns:
+      - name: state_name
+      - name: total_orders
+
+sources:
+  - name: tutorial
+    description: 'Customer records warehouse'
+    database: tutorial
+    schema: dbt_tutorial
+    tables:
+      - name: customer_orders
