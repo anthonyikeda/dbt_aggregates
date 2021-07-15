@@ -5,7 +5,14 @@ models:
     columns:
       - name: state_name
       - name: total_orders
-
+  - name: monthly_sales
+    columns:
+      - name: month
+      - name: total
+  - name: daily_sales
+    columns:
+      - name: day
+      - name: total
 sources:
   - name: tutorial
     description: 'Customer records warehouse'
@@ -13,3 +20,5 @@ sources:
     schema: dbt_tutorial
     tables:
       - name: customer_orders
+      - name: customer
+      - name: orders
